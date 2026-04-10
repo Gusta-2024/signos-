@@ -1,0 +1,102 @@
+body {
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* ORGANIZAÇÃO EM COLUNA */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conjunto todo no meio da tela */
+    align-items: center;
+    gap: 0; /* Remove qualquer espaço extra automático entre elementos */
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Ajuste específico para o título do header.php */
+header.bg-dark {
+    background: transparent !important; /* Remove o fundo preto se quiser um visual limpo */
+    margin-bottom: 20px; /* Margem negativa para "puxar" o card para perto do título */
+    z-index: 10;
+}
+
+/* Card Principal Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    max-width: 500px; /* Aumentei um pouquinho pra ficar mais robusto */
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave no hover */
+}
+
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+/* Títulos com Gradiente Prateado */
+.glass-card h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #cdcdcd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Customização dos Inputs */
+.custom-input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: white !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Ícone do calendário branco */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Botão com Brilho */
+.hover-glow {
+    transition: all 0.4s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) !important;
+    background-color: #fff !important;
+    color: #090A0F !important;
+}
+
+/* Keyframes das Animações */
+@keyframes subirERevelar {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animar {
+    opacity: 0;
+    animation: subirERevelar 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Delays para animação em "escadinha" */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-nome { animation-delay: 0.3s; }
+.delay-img { animation-delay: 0.5s; }
+.delay-desc { animation-delay: 0.7s; }
