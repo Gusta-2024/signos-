@@ -3,26 +3,22 @@ body {
     color: white;
     min-height: 100vh;
     margin: 0;
-    
-    /* ORGANIZAÇÃO EM COLUNA */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conjunto todo no meio da tela */
+    justify-content: center; 
     align-items: center;
-    gap: 0; /* Remove qualquer espaço extra automático entre elementos */
+    gap: 0; 
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
 
-/* Ajuste específico para o título do header.php */
 header.bg-dark {
-    background: transparent !important; /* Remove o fundo preto se quiser um visual limpo */
-    margin-bottom: 20px; /* Margem negativa para "puxar" o card para perto do título */
+    background: transparent !important; 
+    margin-bottom: 20px; 
     z-index: 10;
 }
 
-/* Card Principal Glassmorphism */
 .glass-card {
     background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(15px);
@@ -31,17 +27,16 @@ header.bg-dark {
     border-radius: 30px;
     padding: 3rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-    max-width: 500px; /* Aumentei um pouquinho pra ficar mais robusto */
+    max-width: 500px; 
     width: 90%;
     text-align: center;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave no hover */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
 .glass-card:hover {
     transform: translateY(-8px) scale(1.01);
 }
 
-/* Títulos com Gradiente Prateado */
 .glass-card h1 {
     font-weight: 700;
     letter-spacing: 2px;
@@ -52,7 +47,6 @@ header.bg-dark {
     -webkit-text-fill-color: transparent;
 }
 
-/* Customização dos Inputs */
 .custom-input {
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: white !important;
@@ -83,7 +77,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #090A0F !important;
 }
 
-/* Keyframes das Animações */
 @keyframes subirERevelar {
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }

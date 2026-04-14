@@ -1,6 +1,4 @@
-<?php 
-// O include correto para a sua estrutura de pastas
-include('layouts/header.php'); 
+<?php include('layouts/header.php'); 
 
 $data_nascimento = $_POST['data_nascimento'] ?? null;
 
