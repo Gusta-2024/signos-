@@ -1,5 +1,4 @@
 <?php 
-// CORREÇÃO: O arquivo header.php está dentro da pasta layouts
 include('layouts/header.php'); 
 ?>
 
